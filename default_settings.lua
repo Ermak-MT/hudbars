@@ -1,6 +1,6 @@
 -- (Hardcoded) default settings
 
-hb.settings.max_bar_length = 160
+hb.settings.max_bar_length = 235
 hb.settings.statbar_length = 20
 
 -- Statbar positions
@@ -8,10 +8,10 @@ hb.settings.pos_left = {}
 hb.settings.pos_right = {}
 hb.settings.start_offset_left = {}
 hb.settings.start_offset_right= {}
-hb.settings.pos_left.x = hb.load_setting("hudbars_pos_left_x", "number", 0.5)
-hb.settings.pos_left.y = hb.load_setting("hudbars_pos_left_y", "number", 1)
+hb.settings.pos_left.x = hb.load_setting("hudbars_pos_left_x", "number", 0.438)
+hb.settings.pos_left.y = hb.load_setting("hudbars_pos_left_y", "number", 0.98)
 hb.settings.pos_right.x = hb.load_setting("hudbars_pos_right_x", "number", 0.5)
-hb.settings.pos_right.y = hb.load_setting("hudbars_pos_right_y", "number", 1)
+hb.settings.pos_right.y = hb.load_setting("hudbars_pos_right_y", "number", 0.98)
 hb.settings.bar_type = hb.load_setting("hudbars_bar_type", "string", "progress_bar", {"progress_bar", "statbar_classic", "statbar_modern"})
 if hb.settings.bar_type == "progress_bar" then
 	hb.settings.start_offset_left.x = hb.load_setting("hudbars_start_offset_left_x", "number", -175)
@@ -33,6 +33,7 @@ hb.settings.forceload_default_hudbars = hb.load_setting("hudbars_forceload_defau
 -- Misc. settings
 hb.settings.alignment_pattern = hb.load_setting("hudbars_alignment_pattern", "string", "zigzag", {"zigzag", "stack_up", "stack_down"})
 hb.settings.autohide_breath = hb.load_setting("hudbars_autohide_breath", "bool", true)
+hb.settings.hide_labels = hb.load_setting("hudbars_hide_labels", "bool", false)
 
 local sorting = minetest.settings:get("hudbars_sorting")
 if sorting ~= nil then
