@@ -1,6 +1,10 @@
 local S = minetest.get_translator("hudbars")
 local NS = function(s) return s end
 
+local path = minetest.get_modpath(minetest.get_current_modname())
+
+dofile(path .. "/eat.lua")
+
 -- Boilerplate for compatibiliity with pre-5.9.0
 -- versions of minetest
 local hud_def_type_field
